@@ -2,39 +2,25 @@
 int main()
 {
  int i,j;
- for(i=0;i<6;i++)
-    {
-     for(j=0;j<=5+i;j++)
-          if(j<5-i)
-             printf(" ");
-          else if((i+1)%2)
-             if(j%2)
+ for(j=0;j<13;j++)
+ {
+  if(j%2);
+  else if(j==0 || j==6||j==12)
+      for(i=0;i<7;i++)
+          printf("*");
+  else if(j<6)
+      for(i=0;i<7;i++)
+           if(i<=j/2 || i>=6-j/2)
                 printf("*");
-             else
+           else
                 printf(" ");
-          else
-              if(j%2)
-                 printf(" ");
-              else
-                 printf("*");
-     printf("\n");
-    }
- for(i=0;i<5;i++)
-    {
-     for(j=0;j<=9-i;j++)
-          if(j<=i)
-             printf(" ");
-          else if((i+1)%2)
-             if(j%2)
-                 printf("*");
-             else
-                 printf(" ");
-          else
-              if(j%2)
-                  printf(" ");
-              else
-                  printf("*");
-     printf("\n");
-    }
+  else
+      for(i=0;i<7;i++)
+           if(i<7-j/2 ||i>=j/2)
+                printf("*");
+           else
+                printf(" ");
+  printf("\n");
+ }
  return 0;
 }
