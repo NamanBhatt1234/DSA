@@ -1,17 +1,23 @@
 #include<stdio.h>
 int main()
 {
- int i,j;
- for(i=0;i<5;i++)
- {
-  for(j=0;j<5;j++)
+ int a=1,b=0,c=0;
+ int i=0,j=0;
+  while(c<610)
      {
-      if(j<4-i)
-          printf(" ");
+      c=a+b;
+      if(j==0||j<i)
+       {
+        printf("%d ",c);
+        j++;
+       }
       else
-          printf("*");
+       {
+        printf("\n%d ",c);
+        j=0;
+        i++;
+       }
+      a=b;
+      b=c;
      }
-  printf("\n");
- }
- return 0;
 }
